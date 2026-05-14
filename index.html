@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,66 +8,104 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
 </head>
+
 <body>
     <header>
-        <h1>Logo</h1>
-        <nav><ul>
-            <li><a href="#">Inicial</a></li>
-            <li><a href="integrantes.html">Integrantes</a></li>
-            <li><a href="./sobre.html">Sobre</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="#">Solução</a></li>
-        </ul></nav>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span>SoulUp<span class="highlight">Rocket</span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="active">Inicial</a></li>
+                    <li><a href="#" class="active">Integrantes</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="./solucao.html">Solução</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span>☰</span>
+            </div>
+        </div>
     </header>
+    
     <main>
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Sua ação sustentável <span>vira passagem</span> de transporte público</h1>
-                    <p>Complete missões diárias, acumule EcoCoins e troque por créditos reais para usar no metrô, ônibus ou trem.</p>
+                    <h1>Sua ação sustentável <span class="highlight">vira passagem</span> de transporte público</h1>
+                    <p>Complete missões diárias, acumule EcoCoins e troque por créditos reais para usar no metrô, ônibus
+                        ou trem.</p>
                     <div>
-                        <button>Ver Missões</button>
+                        <button class="btn-primary">Ver Missões</button>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <span>💰</span>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-emoji">💰</span>
                         <div>
-                            <span>Seu Saldo</span>
-                            <span id="userBalance">R$ 12,50</span>
+                            <span class="stat-label">Seu Saldo</span>
+                            <span class="stat-value" id="userBalance">R$ 12,50</span>
                         </div>
                     </div>
-                    <div>
-                        <span>🎫</span>
+                    <div class="stat-card">
+                        <span class="stat-emoji">🎫</span>
                         <div>
-                            <span>Próximo resgate</span>
-                            <span>R$ 4,40</span>
+                            <span class="stat-label">Próximo resgate</span>
+                            <span class="stat-value">R$ 4,40</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="missions">
+        <section class="missions" id="missions">
             <div class="container">
                 <h2>📋 Missões de hoje</h2>
                 <p class="section-subtitle">Complete e ganhe dinheiro real para sua mobilidade</p>
-                
+
                 <div class="missions-grid" id="missionsGrid"></div>
-                
+
                 <div class="resgate-section">
                     <h3>🎟️ Resgate sua passagem</h3>
                     <p>Acumule o valor total da passagem e resgate diretamente no app SoulUp.</p>
-                    <button id="redeemBtn">Resgatar agora</button>
+                    <button class="btn-primary" id="redeemBtn">Resgatar agora</button>
                     <div id="redeemMessage"></div>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
-        <p>© 2026 EcoCommute - Challenge SoulUp | 1º Semestre</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>🌿</span> SoulUp Rocket
+                    <p>Transformando pequenas ações em grandes mudanças.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre o Projeto</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Parceria</h4>
+                    <p>🤝 SoulUp + FIAP</p>
+                    <p>📧 challenge@soulup.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
+            </div>
+        </div>
+        </div>
     </footer>
 </body>
+
 </html>

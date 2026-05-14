@@ -1,36 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulUp Rocket</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header>
-        <h1>Logo</h1>
-        <nav><ul>
-            <li><a href="./index.html">Inicial</a></li>
-            <li><a href="#">Integrantes</a></li>
-            <li><a href="./sobre.html">Sobre</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="#">Solução</a></li>
-        </ul></nav>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span>SoulUp<span class="highlight">Rocket</span></span>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">Inicial</a></li>
+                    <li><a href="#" class="active">Integrantes</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="./solucao.html">Solução</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span>☰</span>
+            </div>
     </header>
     <main>
-        <div class="container">
-            <h1>Nossa Equipe</h1>
-            <div>
-                <h3>Sabrina Fraga Lima</h3>
-                <p>Rm 572548</p>
-                <p>1TDSPG</p>
+        <section class="team-section">
+            <div class="container">
+
+                <h1 class="team-title">👥 Nossa Equipe</h1>
+
+                <div class="team-grid">
+
+                    <div class="team-card">
+
+                        <img src="./assets/img/joao.jpg" alt="Foto da Sabrina" class="team-photo">
+
+                        <h3>Sabrina Fraga Lima</h3>
+
+                        <p>RM 572548</p>
+
+                        <p>Turma: 1TDSPG</p>
+
+                        <div class="team-links">
+                            <a href="#">🔗 GitHub</a>
+                            <a href="#">💼 LinkedIn</a>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
             </div>
-        </div>
+        </section>
 
     </main>
-    
+
     <footer>
-        <p>© 2026 EcoCommute - Challenge SoulUp | 1º Semestre</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>🌿</span> SoulUp Rocket
+                    <p>Transformando pequenas ações em grandes mudanças.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre o Projeto</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Parceria</h4>
+                    <p>🤝 SoulUp + FIAP</p>
+                    <p>📧 challenge@soulup.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
+            </div>
+        </div>
+        </div>
     </footer>
 </body>
+
 </html>

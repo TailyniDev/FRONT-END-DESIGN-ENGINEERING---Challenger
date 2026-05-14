@@ -1,34 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulUp Rocket</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header>
-        <h1>Logo</h1>
-        <nav><ul>
-            <li><a href="index.html">Inicial</a></li>
-            <li><a href="integrantes.html">Integrantes</a></li>
-            <li><a href="./sobre.html">Sobre</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Solução</a></li>
-        </ul></nav>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span>SoulUp<span class="highlight">Rocket</span></span>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">Inicial</a></li>
+                    <li><a href="./integrantes.html">Integrantes</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./faq.html" class="active">FAQ</a></li>
+                    <li><a href="#" class="active">Contato</a></li>
+                    <li><a href="./solucao.html">Solução</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span>☰</span>
+            </div>
     </header>
     <main>
-        <h1>Fale Conosco</h1>
-        <form action="">
-            <input type="text">
-            <input type="text">
-            <textarea name="" id=""></textarea>
-            <button>Enviar mensagem</button>
-        </form>
+        <section class="contact-section">
+            <div class="container">
+
+                <h1 class="contact-title">📬 Fale Conosco</h1>
+
+                <form class="contact-form">
+
+                    <input type="text" placeholder="Seu nome" class="contact-input">
+
+                    <input type="email" placeholder="Seu e-mail" class="contact-input">
+
+                    <textarea placeholder="Sua mensagem" rows="5" class="contact-textarea"></textarea>
+
+                    <button type="submit" class="btn-primary contact-button">
+                        Enviar mensagem
+                    </button>
+
+                </form>
+            </div>
+        </section>
     </main>
-    
+
     <footer>
-        <p>© 2026 EcoCommute - Challenge SoulUp | 1º Semestre</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>🌿</span> SoulUp Rocket
+                    <p>Transformando pequenas ações em grandes mudanças.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre o Projeto</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Parceria</h4>
+                    <p>🤝 SoulUp + FIAP</p>
+                    <p>📧 challenge@soulup.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
+            </div>
+        </div>
+        </div>
     </footer>
 </body>
+
 </html>

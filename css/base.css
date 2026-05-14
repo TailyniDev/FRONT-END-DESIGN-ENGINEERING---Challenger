@@ -71,6 +71,7 @@ h2 {
 .btn-primary {
     background-color: var(--color-primary);
     color: var(--color-white);
+    margin: 20px 0;
 }
 
 .btn-primary:hover {

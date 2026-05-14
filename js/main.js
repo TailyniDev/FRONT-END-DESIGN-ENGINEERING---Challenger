@@ -107,7 +107,31 @@ function updateBalance() {
     }
 }
 
+function setupRedeem() {
+    const redeemBtn = document.getElementById("redeemBtn");
+    const redeemMessage = document.getElementById("redeemMessage");
+
+    redeemBtn.addEventListener("click", () => {
+        const ticketPrice = 4.40;
+
+        if (userBalance >= ticketPrice) {
+            userBalance -= ticketPrice;
+
+            updateBalance();
+
+            redeemMessage.innerHTML = `
+                <p>✅ Passagem resgatada com sucesso!</p>
+            `;
+        } else {
+            redeemMessage.innerHTML = `
+                <p>❌ Saldo insuficiente.</p>
+            `;
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     renderMissions();
     updateBalance();
+    setupRedeem();
 });

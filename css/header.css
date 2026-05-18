@@ -16,11 +16,11 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 0;
 }
 
-.logo-icon {
-    font-size: 1.5rem;
-    margin-right: 8px;
+.logo img{
+    width: 25%;
 }
 
 nav ul {

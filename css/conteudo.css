@@ -131,6 +131,10 @@
     color: var(--color-primary-dark);
 }
 
+.team-links img{
+    width: 3%;
+}
+
 .page-header {
     padding: 3rem 0;
     text-align: center;
@@ -261,6 +265,7 @@
 .solution-list {
     margin-top: 1rem;
     padding-left: 1.5rem;
+    list-style-type: none;
 }
 
 .solution-list li {

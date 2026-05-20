@@ -1,4 +1,10 @@
+/* ═══════════════════════════════════════
+   RESPONSIVIDADE.CSS — Media queries
+   ═══════════════════════════════════════ */
+
 @media (max-width: 768px) {
+
+    /* ── Nav mobile ── */
     nav ul {
         display: none;
         flex-direction: column;
@@ -10,25 +16,85 @@
         padding: 1rem;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-    
+
     nav ul.show {
         display: flex;
     }
-    
+
     .mobile-menu {
         display: block;
     }
-    
+
+    /* ── Tipografia ── */
     h1 {
         font-size: 2rem;
     }
-    
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
+
+    /* ── Hero ── */
+    .hero-stats {
+        gap: 1.2rem;
     }
-    
+
+    /* ── How it works ── */
+    .steps-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .step-connector {
+        width: 2px;
+        height: 2rem;
+        background: repeating-linear-gradient(
+            180deg,
+            #1d9e75 0, #1d9e75 6px,
+            transparent 6px, transparent 12px
+        );
+    }
+
+    /* ── Features ── */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-large {
+        grid-row: span 1;
+    }
+
+    /* ── Missões ── */
     .missions-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .profile-hero {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .profile-badge {
+        margin: 0 auto;
+    }
+
+    .profile-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .integrantes-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .integrantes-meta-dot {
+        display: none;
     }
 }

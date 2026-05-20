@@ -1,0 +1,18 @@
+{
+  "logins": [
+    {
+      "user": "Tailyni",
+      "senha": "123123",
+      "email": "tailyni@gmail.com",
+      "telefone": "11930855620",
+      "id": "L-N0TRLbLOg"
+    }
+  ],
+  "adms": [
+    {
+      "id": "1",
+      "user": "admin",
+      "senha": "admin123"
+    }
+  ]
+}

@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Missões-SoulUp Rocket</title>
+    <title>Missões — SoulUp Rocket</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
-    
+    <script src="js/auth.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
+
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="./assets/Logo.png" alt="Logo">
+                <img src="./assets/Logo.png" alt="Logo SoulUp">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Inicial</a></li>
+                    <li><a href="./index.html">Inicial</a></li>
                     <li><a href="./integrantes.html">Integrantes</a></li>
                     <li><a href="./sobre.html">Sobre</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="./contato.html">Contato</a></li>
                     <li><a href="./solucao.html">Solução</a></li>
-                    <li><button class="btn-secondary"><a href="./login.html">Login</a></button></li>
+
+                    <li id="nav-missions" style="display: none">
+                        <a href="./missions.html" class="active">Missões</a>
+                    </li>
+                    <li id="nav-profile" style="display: none">
+                        <a href="./perfil.html">Perfil</a>
+                    </li>
+
+                    <li id="auth-buttons" style="display: list-item">
+                        <button class="btn-secondary">
+                            <a href="./login.html">Login</a>
+                        </button>
+                    </li>
+
+                    <li id="user-menu" style="display: none">
+                        <span id="user-display"></span>
+                        <button class="btn-secondary" onclick="logout()">Sair</button>
+                    </li>
                 </ul>
             </nav>
             <div class="mobile-menu">
@@ -32,37 +50,37 @@
             </div>
         </div>
     </header>
-    
+
     <main>
-        <section class="hero">
+
+        <!-- Hero da página de missões -->
+        <section class="page-header">
             <div class="container">
-                <div class="hero-content">
-                    <h1>Sua ação sustentável <span class="highlight">vira passagem</span> de transporte público</h1>
-                    <p>Complete missões diárias, acumule EcoCoins e troque por créditos reais para usar no metrô, ônibus
-                        ou trem.</p>
-                    <div>
-                        <button class="btn-primary">Ver Missões</button>
-                    </div>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-card">
-                        <span class="stat-emoji">💰</span>
+                <h1>Sua ação sustentável <span class="highlight">vira passagem</span></h1>
+                <p>Complete missões diárias, acumule EcoCoins e troque por créditos reais para usar no metrô, ônibus ou
+                    trem.</p>
+
+                <!-- Cards de saldo -->
+                <div class="missions-stats">
+                    <div class="mission-stat-card">
+                        <span class="mission-stat-emoji">💰</span>
                         <div>
-                            <span class="stat-label">Seu Saldo</span>
-                            <span class="stat-value" id="userBalance">R$ 12,50</span>
+                            <span class="mission-stat-label">Seu Saldo</span>
+                            <span class="mission-stat-value" id="userBalance">R$ 12,50</span>
                         </div>
                     </div>
-                    <div class="stat-card">
-                        <span class="stat-emoji">🎫</span>
+                    <div class="mission-stat-card">
+                        <span class="mission-stat-emoji">🎫</span>
                         <div>
-                            <span class="stat-label">Próximo resgate</span>
-                            <span class="stat-value">R$ 4,40</span>
+                            <span class="mission-stat-label">Próximo resgate</span>
+                            <span class="mission-stat-value">R$ 4,40</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Missões -->
         <section class="missions" id="missions">
             <div class="container">
                 <h2>📋 Missões de hoje</h2>
@@ -78,6 +96,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -106,8 +125,8 @@
                 <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
             </div>
         </div>
-        </div>
     </footer>
+
 </body>
 
 </html>

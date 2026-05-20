@@ -1,102 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ-SoulUp Rocket</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ-SoulUp Rocket</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/auth.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="./assets/Logo.png" alt="Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Inicial</a></li>
-                    <li><a href="./integrantes.html">Integrantes</a></li>
-                    <li><a href="./sobre.html">Sobre</a></li>
-                    <li><a href="#"  class="active">FAQ</a></li>
-                    <li><a href="./contato.html">Contato</a></li>
-                    <li><a href="./solucao.html">Solução</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu">
-                <span>☰</span>
-            </div>
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="./assets/Logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicial</a></li>
+          <li><a href="./integrantes.html">Integrantes</a></li>
+          <li><a href="./sobre.html">Sobre</a></li>
+          <li><a href="./faq.html" class="active">FAQ</a></li>
+          <li><a href="./contato.html">Contato</a></li>
+          <li><a href="./solucao.html">Solução</a></li>
+
+          <!-- Itens que aparecem APENAS quando logado -->
+          <li id="nav-missions" style="display: none">
+            <a href="./missions.html">Missões</a>
+          </li>
+          <li id="nav-profile" style="display: none">
+            <a href="./perfil.html">Perfil</a>
+          </li>
+
+          <!-- Botão de login (não logado) -->
+          <li id="auth-buttons" style="display: list-item">
+            <button class="btn-secondary">
+              <a href="./login.html">Login</a>
+            </button>
+          </li>
+
+          <!-- Menu do usuário logado (nome) -->
+          <li id="user-menu" style="display: none">
+            <span id="user-display"></span>
+            <button class="btn-secondary" onclick="logout()">Sair</button>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <span>☰</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="faq-section">
+      <div class="container">
+        <h1 class="faq-title">Perguntas Frequentes</h1>
+
+        <div class="faq-content">
+          <div class="faq-item">
+            <h3>Como ganho dinheiro?</h3>
+
+            <p>
+              Completando missões sustentáveis como caminhar, reciclar ou
+              compartilhar carona.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Como resgato a passagem?</h3>
+
+            <p>
+              Quando seu saldo atingir R$ 4,40, clique em "Resgatar" e
+              receberá um código.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>As missões são diárias?</h3>
+
+            <p>
+              Sim! Novas missões aparecem todos os dias para você acumular
+              saldo.
+            </p>
+          </div>
         </div>
-    </header>
-    <main>
-        <section class="faq-section">
-            <div class="container">
+      </div>
+    </section>
+  </main>
 
-                <h1 class="faq-title">Perguntas Frequentes</h1>
-
-                <div class="faq-content">
-
-                    <div class="faq-item">
-                        <h3>Como ganho dinheiro?</h3>
-
-                        <p>
-                            Completando missões sustentáveis como caminhar,
-                            reciclar ou compartilhar carona.
-                        </p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Como resgato a passagem?</h3>
-
-                        <p>
-                            Quando seu saldo atingir R$ 4,40,
-                            clique em "Resgatar" e receberá um código.
-                        </p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>As missões são diárias?</h3>
-
-                        <p>
-                            Sim! Novas missões aparecem todos os dias
-                            para você acumular saldo.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>🌿</span> SoulUp Rocket
-                    <p>Transformando pequenas ações em grandes mudanças.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre o Projeto</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="./integrantes.html">Integrantes</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Parceria</h4>
-                    <p>🤝 SoulUp + FIAP</p>
-                    <p>📧 challenge@soulup.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
-            </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>🌿</span> SoulUp Rocket
+          <p>Transformando pequenas ações em grandes mudanças.</p>
         </div>
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o Projeto</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="./integrantes.html">Integrantes</a></li>
+          </ul>
         </div>
-    </footer>
+        <div class="footer-contact">
+          <h4>Parceria</h4>
+          <p>🤝 SoulUp + FIAP</p>
+          <p>📧 challenge@soulup.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

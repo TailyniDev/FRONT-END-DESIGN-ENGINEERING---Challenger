@@ -1,9 +1,8 @@
 @import url('./base.css');
 @import url('./header.css');
 @import url('./conteudo.css');
-@import url('./flex-box.css');
-@import url('./grid.css');
 @import url('./footer.css');
 @import url('./responsividade.css');
-@import url(./missions.css);
-@import url(./hero.css);
+@import url('./missions.css');
+@import url('./hero.css');
+@import url('./perfil.css');

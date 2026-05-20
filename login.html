@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Soulup Rocket</title>
-    <link rel="stylesheet" href="./css/main">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="container header-container">
@@ -14,13 +18,33 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index.html">Inicial</a></li>
+                    <li><a href="./index.html" class="active">Inicial</a></li>
                     <li><a href="./integrantes.html">Integrantes</a></li>
                     <li><a href="./sobre.html">Sobre</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
-                    <li><a href="#" class="active">Contato</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
                     <li><a href="./solucao.html">Solução</a></li>
-                    <li><button class="btn-secondary"><a href="./login.html">Login</a></button></li>
+
+                    <!-- Itens que aparecem APENAS quando logado -->
+                    <li id="nav-missions" style="display: none">
+                        <a href="./missions.html">Missões</a>
+                    </li>
+                    <li id="nav-profile" style="display: none">
+                        <a href="./perfil.html">Perfil</a>
+                    </li>
+
+                    <!-- Botão de login (não logado) -->
+                    <li id="auth-buttons" style="display: list-item">
+                        <button class="btn-secondary">
+                            <a href="./login.html">Login</a>
+                        </button>
+                    </li>
+
+                    <!-- Menu do usuário logado (nome) -->
+                    <li id="user-menu" style="display: none">
+                        <span id="user-display"></span>
+                        <button class="btn-secondary" onclick="logout()">Sair</button>
+                    </li>
                 </ul>
             </nav>
             <div class="mobile-menu">
@@ -30,7 +54,17 @@
     </header>
 
     <main>
-        
+        <div class="form-container">
+            <form id="form-login">
+                <input type="text" id="login-user" class="input" placeholder="Username" required>
+                <input type="password" id="login-senha" class="input" placeholder="Password" required>
+                <div>
+                    <button type="submit" class="btn-secondary">Login</button>
+                </div>
+                <div class="forgot-password">Esqueceu a senha?</div>
+                <div class="have-account"><a href="./cadastro.html">Não tem uma conta? Faça o Cadastro</a></div>
+            </form>
+        </div>
     </main>
 
 
@@ -60,8 +94,8 @@
                 <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
             </div>
         </div>
-        </div>
     </footer>
 
 </body>
+
 </html>

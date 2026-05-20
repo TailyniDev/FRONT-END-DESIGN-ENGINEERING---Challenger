@@ -8,50 +8,78 @@
     <title>Cadastro-SoulUp Rocket</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-
-    <main class="auth-section">
-
-        <div class="auth-card">
-
-            <h1>📝 Cadastro</h1>
-
-            <form id="registerForm" class="auth-form">
-
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Seu nome"
-                    required
-                >
-
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Seu e-mail"
-                    required
-                >
-
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Sua senha"
-                    required
-                >
-
-                <button type="submit" class="btn-primary">
-                    Criar Conta
-                </button>
-
-            </form>
-
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="./assets/Logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicial</a></li>
+                    <li><a href="./integrantes.html">Integrantes</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="./solucao.html">Solução</a></li>
+                    <li><button class="btn-secondary"><a href="./login.html">Login</a></button></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span>☰</span>
+            </div>
         </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="form-registro">
+                <input type="text" id="registro-user" class="input" placeholder="Nome" required>
+                <input type="tel" id="cpf" name="cpf" class="input" placeholder="Digite seu CPF" />
+                <input name="celular" type="tel" class="input" maxlength="15" onkeyup="handlePhone(event)"
+                    placeholder="Digite seu número de celular" />
+                <input type="password" id="registro-senha" class="input" placeholder="Password" required>
+                <input type="email" id="registro-email" class="input" placeholder="Email" required>
 
+                <div>
+                    <button type="submit" class="btn-secondary">Cadastro</button>
+                </div>
+                <div class="forgot-password">Esqueceu a senha?</div>
+                <div class="have-account"><a href="./login.html">Já tem uma conta? Faça o Login</a></div>
+            </form>
+        </div>
     </main>
 
-    <script src="js/auth.js"></script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>🌿</span> SoulUp Rocket
+                    <p>Transformando pequenas ações em grandes mudanças.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre o Projeto</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="./integrantes.html">Integrantes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Parceria</h4>
+                    <p>🤝 SoulUp + FIAP</p>
+                    <p>📧 challenge@soulup.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SoulUpRocket - Challenge SoulUp | 1º Semestre</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

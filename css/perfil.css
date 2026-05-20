@@ -1,8 +1,11 @@
+/* Header escuro + estatísticas + cards de dados e histórico. */
+
 .profile-header {
     background: linear-gradient(160deg, #0a0f1e 0%, #0d1f3c 50%, #0a2e20 100%);
     padding: 3.5rem 0 2.5rem;
 }
 
+/* Avatar + nome + email lado a lado, com quebra em telas menores */
 .profile-hero {
     display: flex;
     align-items: center;
@@ -10,6 +13,7 @@
     flex-wrap: wrap;
 }
 
+/* Avatar gerado com iniciais do usuário — sem imagem */
 .profile-avatar {
     width: 90px;
     height: 90px;
@@ -34,6 +38,8 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
+
+/* Grid de métricas do usuário — pontos, missões concluídas etc. */
 .profile-stats-section {
     background: #f7f8f5;
     padding: 2rem 0;
@@ -54,31 +60,19 @@
     border: 1px solid var(--color-border);
 }
 
-.profile-stat-card span:first-child {
-    font-size: 1.6rem;
-    display: block;
-}
+.profile-stat-card span:first-child { font-size: 1.6rem; display: block; }                                              /* Ícone */
+.profile-stat-card strong          { font-size: 1.4rem; font-weight: 800; color: var(--color-primary-dark); display: block; } /* Valor */
+.profile-stat-card span:last-child { font-size: 0.75rem; color: var(--color-text-light); text-transform: uppercase; }   /* Legenda */
 
-.profile-stat-card strong {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--color-primary-dark);
-    display: block;
-}
 
-.profile-stat-card span:last-child {
-    font-size: 0.75rem;
-    color: var(--color-text-light);
-    text-transform: uppercase;
-}
-
+/*  Grid assimétrico: dados pessoais à esquerda, histórico à direita.*/
 .profile-content-section {
     padding: 3rem 0 4rem;
 }
 
 .profile-content-grid {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 1fr 1.4fr; /* Coluna direita (histórico) proporcionalmente maior */
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -91,6 +85,7 @@
     border: 1px solid var(--color-border);
 }
 
+/* Cabeçalho interno do card com linha separadora */
 .profile-card-header {
     display: flex;
     align-items: center;
@@ -100,6 +95,7 @@
     border-bottom: 1px solid var(--color-border);
 }
 
+/* Linha de dado individual — label à esquerda, valor à direita */
 .profile-data-item {
     display: flex;
     justify-content: space-between;
@@ -107,6 +103,7 @@
     border-bottom: 1px solid var(--color-border);
 }
 
+/* Botão de logout — vermelho para reforçar ação destrutiva */
 .profile-logout-btn {
     width: 100%;
     margin-top: 2rem;
@@ -125,11 +122,14 @@
     border-bottom: 1px solid var(--color-border);
 }
 
+/* Pontos ganhos em destaque no histórico */
 .profile-history-reward {
     font-weight: 700;
     color: var(--color-primary);
 }
 
+
+/* Indica avanço do usuário em direção a uma meta ou nível. */
 .profile-progress-card {
     background: var(--color-white);
     border-radius: var(--radius-medium);
@@ -140,11 +140,12 @@
 .profile-progress-bar {
     width: 100%;
     height: 12px;
-    background: var(--color-border);
+    background: var(--color-border); /* Trilha cinza de fundo */
     border-radius: 999px;
     overflow: hidden;
 }
 
+/* Largura controlada via JS/inline style — transição suaviza a atualização */
 .profile-progress-fill {
     height: 100%;
     background: linear-gradient(90deg, #1d9e75, #4caf50);

@@ -1,17 +1,21 @@
+/* Seção de abertura com fundo escuro, círculos decorativos,
+   partículas animadas e conteúdo centralizado.*/
 .hero {
     position: relative;
     padding: 6rem 0 5rem;
     background: linear-gradient(160deg, #0a0f1e 0%, #0d1f3c 45%, #0a2e20 100%);
-    overflow: hidden;
+    overflow: hidden; /* Impede que as órbitas grandes vazem para fora */
     text-align: center;
 }
 
+/* Camada de fundo para órbitas e partículas — não intercepta cliques */
 .hero-bg {
     position: absolute;
     inset: 0;
     pointer-events: none;
 }
 
+/* Círculos concêntricos decorativos, centralizados no hero */
 .hero-orbit {
     position: absolute;
     border-radius: 50%;
@@ -21,86 +25,42 @@
     transform: translate(-50%, -50%);
 }
 
-.orbit-1 {
-    width: 320px;
-    height: 320px;
-}
+.orbit-1 { width: 320px; height: 320px; }
+.orbit-2 { width: 560px; height: 560px; }
+.orbit-3 { width: 820px; height: 820px; }
 
-.orbit-2 {
-    width: 560px;
-    height: 560px;
-}
 
-.orbit-3 {
-    width: 820px;
-    height: 820px;
-}
-
+/* PARTÍCULAS
+   Pontos flutuantes espalhados pelo fundo.
+   Cada .pN define posição, tamanho e atraso únicos.*/
 .hero-particle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(29, 158, 117, 0.55);
+    background: rgba(29, 158, 117, 0.55); /* Verde padrão */
     animation: float 6s ease-in-out infinite;
 }
 
-.p1 {
-    width: 6px;
-    height: 6px;
-    top: 20%;
-    left: 15%;
-}
-
-.p2 {
-    width: 4px;
-    height: 4px;
-    top: 65%;
-    left: 80%;
-    animation-delay: 1.5s;
-}
-
-.p3 {
-    width: 8px;
-    height: 8px;
-    top: 30%;
-    left: 75%;
-    animation-delay: 3s;
-    background: rgba(55, 138, 221, 0.6);
-}
-
-.p4 {
-    width: 5px;
-    height: 5px;
-    top: 75%;
-    left: 25%;
-    animation-delay: 2s;
-}
-
-.p5 {
-    width: 4px;
-    height: 4px;
-    top: 45%;
-    left: 90%;
-    animation-delay: 4s;
-    background: rgba(255, 255, 255, 0.4);
-}
+.p1 { width: 6px; height: 6px; top: 20%; left: 15%; }
+.p2 { width: 4px; height: 4px; top: 65%; left: 80%; animation-delay: 1.5s; }
+.p3 { width: 8px; height: 8px; top: 30%; left: 75%; animation-delay: 3s;   background: rgba(55, 138, 221, 0.6); } /* Azul */
+.p4 { width: 5px; height: 5px; top: 75%; left: 25%; animation-delay: 2s; }
+.p5 { width: 4px; height: 4px; top: 45%; left: 90%; animation-delay: 4s;   background: rgba(255, 255, 255, 0.4); } /* Branco */
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-18px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-18px); }
 }
 
+
+/* CONTEÚDO DO HERO*/
+
+/* z-index garante que o texto fique acima das órbitas e partículas */
 .hero-content {
     position: relative;
     z-index: 2;
 }
 
+/* Badge de categoria — ex: "Plataforma de Gestão Ambiental" */
 .hero .badge {
     display: inline-block;
     background: rgba(29, 158, 117, 0.18);
@@ -112,6 +72,7 @@
     margin-bottom: 2rem;
 }
 
+/* Título com tamanho fluido entre 2.4rem e 4rem */
 .hero h1 {
     font-size: clamp(2.4rem, 6vw, 4rem);
     font-weight: 800;
@@ -120,6 +81,7 @@
     margin-bottom: 1.5rem;
 }
 
+/* Trecho do título em gradiente verde → azul */
 .hero h1 span {
     background: linear-gradient(90deg, #5dcaa5, #378add);
     -webkit-background-clip: text;
@@ -133,6 +95,7 @@
     margin: 0 auto 2.5rem;
 }
 
+/* Par de botões centralizados lado a lado */
 .hero-cta {
     display: flex;
     gap: 1rem;
@@ -140,6 +103,7 @@
     margin-bottom: 3.5rem;
 }
 
+/* Botão principal — gradiente verde com sombra colorida */
 .btn-primary-hero {
     background: linear-gradient(135deg, #1d9e75, #0f6e56);
     color: #fff;
@@ -156,6 +120,7 @@
     box-shadow: 0 8px 32px rgba(29, 158, 117, 0.45);
 }
 
+/* Botão secundário — contorno semitransparente sobre fundo escuro */
 .btn-ghost-hero {
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: rgba(255, 255, 255, 0.8);
@@ -171,6 +136,8 @@
     color: #fff;
 }
 
+
+/* Linha de métricas no rodapé do hero, separadas por divisores.*/
 .hero-stats {
     display: flex;
     align-items: center;
@@ -197,6 +164,7 @@
     margin-top: 0.15rem;
 }
 
+/* Linha vertical entre as estatísticas */
 .stat-divider {
     width: 1px;
     height: 36px;

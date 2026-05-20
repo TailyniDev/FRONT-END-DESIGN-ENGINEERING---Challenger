@@ -1,3 +1,6 @@
+/* Cards de missões com recompensas e estatísticas do usuário.*/
+
+/* Barra de estatísticas do usuário no topo da seção */
 .missions-stats {
     display: flex;
     gap: 1rem;
@@ -19,6 +22,7 @@
     padding: 4rem 0;
 }
 
+/* Grid responsivo — mínimo de 280px por card */
 .missions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -39,11 +43,13 @@
     transform: translateY(-5px);
 }
 
-.mission-card>div:first-child {
+/* Ícone da missão */
+.mission-card > div:first-child {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
+/* Badge de recompensa — ex: "+50 pontos" */
 .mission-card .reward {
     display: inline-block;
     background: var(--color-primary-bg);
@@ -60,12 +66,14 @@
     margin-top: 1rem;
 }
 
+/* Estado visual de missão já concluída — aplicado via JS */
 .completed {
     background-color: var(--color-border);
     cursor: not-allowed;
     opacity: 0.7;
 }
 
+/* Área de resgate de recompensas, abaixo do grid de missões */
 .resgate-section {
     text-align: center;
     background: var(--color-white);

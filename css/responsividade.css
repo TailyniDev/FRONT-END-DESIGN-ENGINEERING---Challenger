@@ -1,15 +1,19 @@
+/* Tablets e celulares maiores (até 768px) */
 @media (max-width: 768px) {
+
+    /* Menu de navegação vira dropdown vertical acionado pelo hamburguer */
     nav ul {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 70px; /* Altura do header */
         left: 0;
         width: 100%;
         background: white;
         padding: 1rem;
     }
 
+    /* Classe adicionada via JS ao clicar no botão hamburguer */
     nav ul.show {
         display: flex;
     }
@@ -18,39 +22,37 @@
         display: block;
     }
 
+    /* Steps empilham verticalmente em vez de enfileirar */
     .steps-grid {
         flex-direction: column;
     }
 
+    /* Conector tracejado vira vertical para acompanhar o novo fluxo */
     .step-connector {
         width: 2px;
         height: 2rem;
-        background: repeating-linear-gradient(180deg, #1d9e75 0, #1d9e75 6px, transparent 6px, transparent 12px);
+        background: repeating-linear-gradient(
+            180deg,
+            #1d9e75 0, #1d9e75 6px,
+            transparent 6px, transparent 12px
+        );
     }
 
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
+    /* Grids multi-coluna colapsam para coluna única */
+    .features-grid        { grid-template-columns: 1fr; }
+    .profile-content-grid { grid-template-columns: 1fr; }
+    .integrantes-grid     { grid-template-columns: 1fr; }
 
-    .feature-large {
-        grid-row: span 1;
-    }
+    /* Card grande perde o span de 2 linhas — todas as linhas ficam iguais */
+    .feature-large { grid-row: span 1; }
 
-    .profile-content-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .sobre-stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .integrantes-grid {
-        grid-template-columns: 1fr;
-    }
+    /* Estatísticas do Sobre ficam em 2 colunas em vez de 4 */
+    .sobre-stats-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
-    .sobre-valores-grid {
-        grid-template-columns: 1fr;
-    }
+
+    /* Grid de valores também colapsa para coluna única */
+    .sobre-valores-grid { grid-template-columns: 1fr; }
 }

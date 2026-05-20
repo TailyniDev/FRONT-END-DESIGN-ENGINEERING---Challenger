@@ -1,10 +1,10 @@
-/* essa parte é pro header ficar bonitinho */
+/* HEADER Fixo no topo da página com sombra sutil para separar do conteúdo. */
 header {
     background: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Garante que o header fique acima de outros elementos */
 }
 
 .header-container {
@@ -32,17 +32,20 @@ nav a {
     transition: color 0.3s;
 }
 
+/* Link ativo recebe o mesmo estilo do hover para indicar a página atual */
 nav a:hover,
 nav a.active {
     color: #2e7d32;
 }
 
+/* Botão de menu hamburguer — visível apenas em mobile (via media query) */
 .mobile-menu {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
+/* Menu do usuário logado — exibido via JS ao autenticar */
 #user-menu {
     display: flex;
     align-items: center;
@@ -51,6 +54,7 @@ nav a.active {
     font-weight: bold;
 }
 
+/* Classe adicionada por JS para sobrescrever display:none herdado */
 #user-menu.visible {
     display: flex !important;
 }

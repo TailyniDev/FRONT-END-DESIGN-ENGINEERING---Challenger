@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato-SoulUp Rocket</title>
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.css">
   <script src="js/auth.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
@@ -13,9 +13,7 @@
 <body>
   <header>
     <div class="container header-container">
-      <div class="logo">
-        <img src="./assets/Logo.png" alt="Logo" />
-      </div>
+      <div class="logo"><img src="./assets/Logo.png" alt="Logo"></div>
       <nav>
         <ul>
           <li><a href="./index.html">Inicial</a></li>
@@ -24,60 +22,34 @@
           <li><a href="./faq.html">FAQ</a></li>
           <li><a href="./contato.html" class="active">Contato</a></li>
           <li><a href="./solucao.html">Solução</a></li>
-
-          <!-- Itens que aparecem APENAS quando logado -->
-          <li id="nav-missions" style="display: none">
-            <a href="./missions.html">Missões</a>
+          <li id="nav-missions" class="hidden"><a href="./missions.html">Missões</a></li>
+          <li id="nav-profile" class="hidden"><a href="./perfil.html">Perfil</a></li>
+          <li id="auth-buttons" class="visible"><button class="btn-secondary"><a href="./login.html">Login</a></button>
           </li>
-          <li id="nav-profile" style="display: none">
-            <a href="./perfil.html">Perfil</a>
-          </li>
-
-          <!-- Botão de login (não logado) -->
-          <li id="auth-buttons" style="display: list-item">
-            <button class="btn-secondary">
-              <a href="./login.html">Login</a>
-            </button>
-          </li>
-
-          <!-- Menu do usuário logado (nome) -->
-          <li id="user-menu" style="display: none">
-            <span id="user-display"></span>
-            <button class="btn-secondary" onclick="logout()">Sair</button>
-          </li>
+          <li id="user-menu" class="hidden"><span id="user-display"></span><button class="btn-secondary"
+              onclick="logout()">Sair</button></li>
         </ul>
       </nav>
-      <div class="mobile-menu">
-        <span>☰</span>
-      </div>
+      <div class="mobile-menu"><span>☰</span></div>
     </div>
   </header>
   <main>
     <section class="contact-section">
       <div class="container">
-        <h1 class="contact-title">📬 Fale Conosco</h1>
-
+        <h1>📬 Fale Conosco</h1>
         <form class="contact-form">
-          <input type="text" placeholder="Seu nome" class="contact-input" />
-
-          <input type="email" placeholder="Seu e-mail" class="contact-input" />
-
-          <textarea placeholder="Sua mensagem" rows="5" class="contact-textarea"></textarea>
-
-          <button type="submit" class="btn-primary contact-button">
-            Enviar mensagem
-          </button>
+          <input type="text" placeholder="Seu nome">
+          <input type="email" placeholder="Seu e-mail">
+          <textarea rows="5" placeholder="Sua mensagem"></textarea>
+          <button type="submit" class="btn-primary">Enviar mensagem</button>
         </form>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="footer-container">
       <div class="footer-content">
-        <div class="footer-logo">
-          <span>🌿</span> SoulUp Rocket
-          <p>Transformando pequenas ações em grandes mudanças.</p>
+        <div class="footer-logo"><span>🌿</span> SoulUp Rocket<p>Transformando pequenas ações em grandes mudanças.</p>
         </div>
         <div class="footer-links">
           <h4>Links Rápidos</h4>

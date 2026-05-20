@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre-SoulUp Rocket</title>
+    <title>Sobre — SoulUp Rocket</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/auth.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -13,9 +13,7 @@
 <body>
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <img src="./assets/Logo.png" alt="Logo">
-            </div>
+            <div class="logo"><img src="./assets/Logo.png" alt="Logo"></div>
             <nav>
                 <ul>
                     <li><a href="./index.html">Inicial</a></li>
@@ -24,73 +22,124 @@
                     <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="./contato.html">Contato</a></li>
                     <li><a href="./solucao.html">Solução</a></li>
-
-                    <!-- Itens que aparecem APENAS quando logado -->
-                    <li id="nav-missions" style="display: none">
-                        <a href="./missions.html">Missões</a>
-                    </li>
-                    <li id="nav-profile" style="display: none">
-                        <a href="./perfil.html" class="active">Perfil</a>
-                    </li>
-
-                    <!-- Botão de login (não logado) -->
-                    <li id="auth-buttons" style="display: list-item">
-                        <button class="btn-secondary">
-                            <a href="./login.html">Login</a>
-                        </button>
-                    </li>
-
-                    <!-- Menu do usuário logado (nome) -->
-                    <li id="user-menu" style="display: none">
-                        <span id="user-display"></span>
-                        <button class="btn-secondary" onclick="logout()">Sair</button>
-                    </li>
+                    <li id="nav-missions" class="hidden"><a href="./missions.html">Missões</a></li>
+                    <li id="nav-profile" class="hidden"><a href="./perfil.html">Perfil</a></li>
+                    <li id="auth-buttons" class="visible"><button class="btn-secondary"><a
+                                href="./login.html">Login</a></button></li>
+                    <li id="user-menu" class="hidden"><span id="user-display"></span><button class="btn-secondary"
+                            onclick="logout()">Sair</button></li>
                 </ul>
             </nav>
-
-            <div class="mobile-menu">
-                <span>☰</span>
-            </div>
+            <div class="mobile-menu"><span>☰</span></div>
         </div>
     </header>
-
     <main>
-        <section class="page-header">
+        <section class="sobre-hero">
             <div class="container">
-                <h1>Sobre o Soulup Rocket</h1>
-                <p>Transformando consciência ambiental em mobilidade real</p>
+                <h1>Sobre a<br><span>SoulUp Rocket</span></h1>
+                <p>Um projeto que nasce da necessidade de tornar a mobilidade urbana mais acessível e sustentável.</p>
+                <div class="hero-cta">
+                    <a href="./login.html" class="btn-primary-hero">Começar agora 🚀</a>
+                    <a href="./solucao.html" class="btn-ghost-hero">Ver solução</a>
+                </div>
             </div>
         </section>
-
-        <section class="content-section">
+        <section class="sobre-stats-section">
             <div class="container">
-
-                <h2>Qual o problema?</h2>
-
-                <p>
-                    Milhares de pessoas deixam de usar transporte público por falta
-                    de incentivo financeiro. O EcoCommute soluciona isso
-                    recompensando ações sustentáveis com dinheiro real para passagens.
-                </p>
-
-                <h2>Como funciona?</h2>
-
-                <p>
-                    1️. Complete missões diárias<br>
-                    2️. Acumule saldo (R$)<br>
-                    3️. Resgate quando atingir o valor da passagem
-                </p>
-
+                <div class="sobre-stats-grid">
+                    <div class="sobre-stat-card"><span>👥</span><strong>2.400+</strong><span>Usuários ativos</span>
+                    </div>
+                    <div class="sobre-stat-card"><span>✅</span><strong>18.000+</strong><span>Missões concluídas</span>
+                    </div>
+                    <div class="sobre-stat-card"><span>🎫</span><strong>3.200+</strong><span>Passagens resgatadas</span>
+                    </div>
+                    <div class="sobre-stat-card"><span>🌱</span><strong>95%</strong><span>Satisfação dos usuários</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="solucao-bloco">
+            <div class="container">
+                <div class="solucao-card">
+                    <h2>🌿 O que é o SoulUp Rocket?</h2>
+                    <p>O SoulUp Rocket é uma plataforma digital desenvolvida por estudantes da FIAP em parceria com a
+                        SoulUp, com o objetivo de conectar sustentabilidade e mobilidade urbana.</p>
+                    <p>A ideia central é simples: recompensar pessoas que praticam ações ecológicas no dia a dia com
+                        créditos reais para usar no transporte público.</p>
+                </div>
+            </div>
+        </section>
+        <section class="solucao-bloco solucao-bloco-alt">
+            <div class="container">
+                <div class="solucao-card">
+                    <h2>❓ Por que ele existe?</h2>
+                    <p>Milhares de brasileiros deixam de usar o transporte público por conta do custo diário das
+                        passagens. Ao mesmo tempo, hábitos sustentáveis como reciclar, caminhar ou compartilhar caronas
+                        raramente trazem benefícios concretos para quem os pratica.</p>
+                    <p>O SoulUp Rocket surgiu para mudar isso: cada pequena ação ecológica gera valor real, ajudando o
+                        usuário e o meio ambiente ao mesmo tempo.</p>
+                </div>
+            </div>
+        </section>
+        <section class="solucao-bloco">
+            <div class="container">
+                <div class="solucao-card">
+                    <h2>🎯 Nossa missão</h2>
+                    <p>Tornar o comportamento sustentável acessível, recompensador e conectado à vida real das pessoas —
+                        especialmente daquelas que mais dependem do transporte público para estudar e trabalhar.</p>
+                    <ul class="solucao-impacto-lista">
+                        <li>🌱 Promover hábitos ecológicos no cotidiano</li>
+                        <li>🚌 Facilitar o acesso ao transporte público</li>
+                        <li>🤝 Conectar sustentabilidade e impacto social</li>
+                        <li>📱 Oferecer uma experiência simples e acessível</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="solucao-bloco">
+            <div class="container">
+                <h2 class="solucao-titulo-secao">💚 Nossos valores</h2>
+                <div class="sobre-valores-grid">
+                    <div class="sobre-valor-card"><span>♻️</span>
+                        <h3>Sustentabilidade</h3>
+                        <p>Cada ação conta. Acreditamos que pequenos hábitos diários geram grandes transformações no
+                            meio ambiente.</p>
+                    </div>
+                    <div class="sobre-valor-card"><span>🤝</span>
+                        <h3>Inclusão</h3>
+                        <p>Mobilidade é direito de todos. Queremos que o transporte público seja acessível independente
+                            da renda.</p>
+                    </div>
+                    <div class="sobre-valor-card"><span>🏆</span>
+                        <h3>Engajamento</h3>
+                        <p>Transformar rotina em conquista. Missões, recompensas e progresso visível para manter a
+                            motivação.</p>
+                    </div>
+                    <div class="sobre-valor-card"><span>🔍</span>
+                        <h3>Transparência</h3>
+                        <p>O usuário sempre sabe quanto acumulou, quanto falta e como cada ação impacta o seu saldo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="solucao-bloco solucao-bloco-alt">
+            <div class="container">
+                <div class="solucao-card">
+                    <h2>🎓 Contexto do projeto</h2>
+                    <p>Este projeto foi desenvolvido como parte do Challenge do 1º semestre de 2026 da FIAP, turma
+                        1TDSPG, em parceria com a empresa SoulUp. O desafio proposto foi criar uma solução tecnológica
+                        que unisse sustentabilidade e mobilidade urbana.</p>
+                    <p>Toda a plataforma — do design ao código — foi construída pelas integrantes da equipe, utilizando
+                        HTML, CSS e JavaScript puro.</p>
+                </div>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <span>🌿</span> SoulUp Rocket
-                    <p>Transformando pequenas ações em grandes mudanças.</p>
+                <div class="footer-logo"><span>🌿</span> SoulUp Rocket<p>Transformando pequenas ações em grandes
+                        mudanças.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Links Rápidos</h4>

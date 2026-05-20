@@ -11,12 +11,9 @@
 </head>
 
 <body>
-
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <img src="./assets/Logo.png" alt="Logo SoulUp">
-            </div>
+            <div class="logo"><img src="./assets/Logo.png" alt="Logo SoulUp"></div>
             <nav>
                 <ul>
                     <li><a href="./index.html">Inicial</a></li>
@@ -25,69 +22,49 @@
                     <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="./contato.html">Contato</a></li>
                     <li><a href="./solucao.html">Solução</a></li>
-
-                    <li id="nav-missions" style="display: none">
-                        <a href="./missions.html" class="active">Missões</a>
-                    </li>
-                    <li id="nav-profile" style="display: none">
-                        <a href="./perfil.html">Perfil</a>
-                    </li>
-
-                    <li id="auth-buttons" style="display: list-item">
-                        <button class="btn-secondary">
-                            <a href="./login.html">Login</a>
-                        </button>
-                    </li>
-
-                    <li id="user-menu" style="display: none">
-                        <span id="user-display"></span>
-                        <button class="btn-secondary" onclick="logout()">Sair</button>
-                    </li>
+                    <li id="nav-missions" class="hidden"><a href="./missions.html" class="active">Missões</a></li>
+                    <li id="nav-profile" class="hidden"><a href="./perfil.html">Perfil</a></li>
+                    <li id="auth-buttons" class="visible"><button class="btn-secondary"><a
+                                href="./login.html">Login</a></button></li>
+                    <li id="user-menu" class="hidden"><span id="user-display"></span><button class="btn-secondary"
+                            onclick="logout()">Sair</button></li>
                 </ul>
             </nav>
-            <div class="mobile-menu">
-                <span>☰</span>
-            </div>
+            <div class="mobile-menu"><span>☰</span></div>
         </div>
     </header>
-
     <main>
-
-        <!-- Hero da página de missões -->
-        <section class="page-header">
-            <div class="container">
-                <h1>Sua ação sustentável <span class="highlight">vira passagem</span></h1>
-                <p>Complete missões diárias, acumule EcoCoins e troque por créditos reais para usar no metrô, ônibus ou
-                    trem.</p>
-
-                <!-- Cards de saldo -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-orbit orbit-1"></div>
+                <div class="hero-orbit orbit-2"></div>
+                <div class="hero-orbit orbit-3"></div>
+                <div class="hero-particle p1"></div>
+                <div class="hero-particle p2"></div>
+                <div class="hero-particle p3"></div>
+                <div class="hero-particle p4"></div>
+                <div class="hero-particle p5"></div>
+            </div>
+            <div class="container hero-content">
+                <h1>Sua ação sustentável <br><span>vira passagem</span></h1>
+                <p class="subtitle">Complete missões diárias, acumule EcoCoins e troque por créditos reais para usar no
+                    metrô, ônibus ou trem.</p>
+                <div class="hero-cta"><a href="./sobre.html" class="btn-ghost-hero">Saiba mais</a></div>
                 <div class="missions-stats">
-                    <div class="mission-stat-card">
-                        <span class="mission-stat-emoji">💰</span>
-                        <div>
-                            <span class="mission-stat-label">Seu Saldo</span>
-                            <span class="mission-stat-value" id="userBalance">R$ 12,50</span>
-                        </div>
+                    <div class="mission-stat-card"><span>💰</span>
+                        <div><span>Seu Saldo</span><strong id="userBalance">R$ 12,50</strong></div>
                     </div>
-                    <div class="mission-stat-card">
-                        <span class="mission-stat-emoji">🎫</span>
-                        <div>
-                            <span class="mission-stat-label">Próximo resgate</span>
-                            <span class="mission-stat-value">R$ 4,40</span>
-                        </div>
+                    <div class="mission-stat-card"><span>🎫</span>
+                        <div><span>Próximo resgate</span><strong>R$ 4,40</strong></div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Missões -->
-        <section class="missions" id="missions">
+        <section class="missions">
             <div class="container">
                 <h2>📋 Missões de hoje</h2>
                 <p class="section-subtitle">Complete e ganhe dinheiro real para sua mobilidade</p>
-
                 <div class="missions-grid" id="missionsGrid"></div>
-
                 <div class="resgate-section">
                     <h3>Resgate sua passagem</h3>
                     <p>Acumule o valor total da passagem e resgate diretamente no app SoulUp.</p>
@@ -96,15 +73,12 @@
                 </div>
             </div>
         </section>
-
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <span>🌿</span> SoulUp Rocket
-                    <p>Transformando pequenas ações em grandes mudanças.</p>
+                <div class="footer-logo"><span>🌿</span> SoulUp Rocket<p>Transformando pequenas ações em grandes
+                        mudanças.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Links Rápidos</h4>
@@ -126,7 +100,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

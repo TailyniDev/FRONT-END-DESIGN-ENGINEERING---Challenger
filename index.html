@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SoulUp Rocket</title>
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.css">
   <script src="js/auth.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
@@ -13,9 +13,7 @@
 <body>
   <header>
     <div class="container header-container">
-      <div class="logo">
-        <img src="./assets/Logo.png" alt="Logo" />
-      </div>
+      <div class="logo"><img src="./assets/Logo.png" alt="Logo"></div>
       <nav>
         <ul>
           <li><a href="./index.html" class="active">Inicial</a></li>
@@ -24,38 +22,19 @@
           <li><a href="./faq.html">FAQ</a></li>
           <li><a href="./contato.html">Contato</a></li>
           <li><a href="./solucao.html">Solução</a></li>
-
-          <!-- Itens que aparecem APENAS quando logado -->
-          <li id="nav-missions" style="display: none">
-            <a href="./missions.html">Missões</a>
+          <li id="nav-missions" class="hidden"><a href="./missions.html">Missões</a></li>
+          <li id="nav-profile" class="hidden"><a href="./perfil.html">Perfil</a></li>
+          <li id="auth-buttons" class="visible"><button class="btn-secondary"><a href="./login.html">Login</a></button>
           </li>
-          <li id="nav-profile" style="display: none">
-            <a href="./perfil.html">Perfil</a>
-          </li>
-
-          <!-- Botão de login (não logado) -->
-          <li id="auth-buttons" style="display: list-item">
-            <button class="btn-secondary">
-              <a href="./login.html">Login</a>
-            </button>
-          </li>
-
-          <!-- Menu do usuário logado (nome) -->
-          <li id="user-menu" style="display: none">
-            <span id="user-display"></span>
-            <button class="btn-secondary" onclick="logout()">Sair</button>
-          </li>
+          <li id="user-menu" class="hidden"><span id="user-display"></span><button class="btn-secondary"
+              onclick="logout()">Sair</button></li>
         </ul>
       </nav>
-      <div class="mobile-menu">
-        <span>☰</span>
-      </div>
+      <div class="mobile-menu"><span>☰</span></div>
     </div>
   </header>
-
   <main>
-    <!-- Cole isso dentro do seu <main> -->
-
+    /* essa parte é pro hero ficar bonitinho com estrelinhas*/
     <section class="hero">
       <div class="hero-bg">
         <div class="hero-orbit orbit-1"></div>
@@ -68,90 +47,74 @@
         <div class="hero-particle p5"></div>
       </div>
       <div class="container hero-content">
-        <div class="hero-badge">🌿 Missão ativa</div>
-        <h1 class="hero-title">
-          Pequenas ações,<br>
-          <span class="hero-highlight">grandes mudanças</span>
-        </h1>
-        <p class="hero-subtitle">
-          Complete missões diárias, suba de nível e transforme seus hábitos em impacto real.
-          Cada passo conta. Cada ação importa.
-        </p>
+        <div class="badge">🌿 Missão ativa</div>
+        <h1>Pequenas ações,<br><span>grandes mudanças</span></h1>
+        <p class="subtitle">Complete missões diárias, suba de nível e transforme seus hábitos em impacto real. Cada
+          passo conta. Cada ação importa.</p>
         <div class="hero-cta">
           <a href="./login.html" class="btn-primary-hero">Começar agora 🚀</a>
           <a href="./sobre.html" class="btn-ghost-hero">Saiba mais</a>
         </div>
         <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">2.4k</span>
-            <span class="stat-label">usuários ativos</span>
-          </div>
+          <div class="stat"><span>2.4k</span><span>usuários ativos</span></div>
           <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">18k</span>
-            <span class="stat-label">missões concluídas</span>
-          </div>
+          <div class="stat"><span>18k</span><span>missões concluídas</span></div>
           <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">95%</span>
-            <span class="stat-label">satisfação</span>
-          </div>
+          <div class="stat"><span>95%</span><span>satisfação</span></div>
         </div>
       </div>
     </section>
-
     <section class="how-it-works">
       <div class="container">
         <div class="section-label">Como funciona</div>
         <h2 class="section-title">Três passos para decolar</h2>
         <div class="steps-grid">
           <div class="step-card">
-            <div class="step-icon">📋</div>
-            <div class="step-num">01</div>
+            <div>📋</div>
+            <div>01</div>
             <h3>Receba missões</h3>
             <p>Missões personalizadas chegam todo dia. Desafios simples que cabem na sua rotina.</p>
           </div>
           <div class="step-connector"></div>
           <div class="step-card">
-            <div class="step-icon">✅</div>
-            <div class="step-num">02</div>
+            <div>✅</div>
+            <div>02</div>
             <h3>Complete e registre</h3>
             <p>Marque como feito, compartilhe seu progresso e acumule XP a cada conquista.</p>
           </div>
           <div class="step-connector"></div>
           <div class="step-card">
-            <div class="step-icon">🏆</div>
-            <div class="step-num">03</div>
+            <div>🏆</div>
+            <div>03</div>
             <h3>Suba de nível</h3>
             <p>Evolua no ranking, desbloqueie conquistas e veja o impacto das suas ações crescer.</p>
           </div>
         </div>
       </div>
     </section>
-
     <section class="features">
       <div class="container">
         <div class="section-label">O que oferecemos</div>
         <h2 class="section-title">Feito para quem quer evoluir</h2>
         <div class="features-grid">
           <div class="feature-card feature-large">
-            <div class="feature-icon-wrap">🎯</div>
+            <div>🎯</div>
             <h3>Missões diárias</h3>
             <p>Desafios novos todo dia, adaptados ao seu nível e objetivos. Nunca fica entediante.</p>
             <div class="feature-tag">Personalizado</div>
           </div>
           <div class="feature-card">
-            <div class="feature-icon-wrap">📈</div>
+            <div>📈</div>
             <h3>Progresso visual</h3>
             <p>Acompanhe sua evolução em tempo real com gráficos e conquistas desbloqueáveis.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon-wrap">🤝</div>
+            <div>🤝</div>
             <h3>Comunidade</h3>
             <p>Compare com amigos, suba no ranking e inspire outros com o seu exemplo.</p>
           </div>
           <div class="feature-card feature-accent">
-            <div class="feature-icon-wrap">🌍</div>
+            <div>🌍</div>
             <h3>Impacto real</h3>
             <p>Cada missão gera impacto mensurável no mundo ao seu redor. Você faz a diferença.</p>
             <div class="feature-tag feature-tag-dark">+impacto</div>
@@ -159,7 +122,6 @@
         </div>
       </div>
     </section>
-
     <section class="cta-section">
       <div class="container">
         <div class="cta-card">
@@ -172,13 +134,10 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div class="footer-container">
       <div class="footer-content">
-        <div class="footer-logo">
-          <span>🌿</span> SoulUp Rocket
-          <p>Transformando pequenas ações em grandes mudanças.</p>
+        <div class="footer-logo"><span>🌿</span> SoulUp Rocket<p>Transformando pequenas ações em grandes mudanças.</p>
         </div>
         <div class="footer-links">
           <h4>Links Rápidos</h4>

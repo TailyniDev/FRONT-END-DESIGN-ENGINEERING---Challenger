@@ -158,7 +158,6 @@ function setupRedeem() {
     });
 }
 
-// ── Inicialização ──
 document.addEventListener("DOMContentLoaded", () => {
     loadData();
     renderMissions();

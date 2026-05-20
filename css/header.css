@@ -1,10 +1,7 @@
-/* ═══════════════════════════════════════
-   HEADER.CSS
-   ═══════════════════════════════════════ */
-
+/* essa parte é pro header ficar bonitinho */
 header {
     background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -15,10 +12,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 20px;
-}
-
-.logo {
-    margin: 0;
 }
 
 .logo img {
@@ -56,4 +49,8 @@ nav a.active {
     gap: 1rem;
     color: var(--color-primary);
     font-weight: bold;
+}
+
+#user-menu.visible {
+    display: flex !important;
 }

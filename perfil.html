@@ -2,22 +2,19 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil — SoulUp Rocket</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
     <script src="js/auth.js" defer></script>
     <script src="js/perfil.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <img src="./assets/Logo.png" alt="Logo SoulUp" />
-            </div>
+            <div class="logo"><img src="./assets/Logo.png" alt="Logo SoulUp"></div>
             <nav>
                 <ul>
                     <li><a href="./index.html">Inicial</a></li>
@@ -26,39 +23,22 @@
                     <li><a href="./faq.html">FAQ</a></li>
                     <li><a href="./contato.html">Contato</a></li>
                     <li><a href="./solucao.html">Solução</a></li>
-
-                    <li id="nav-missions" style="display: none">
-                        <a href="./missions.html">Missões</a>
-                    </li>
-                    <li id="nav-profile" style="display: none">
-                        <a href="./perfil.html" class="active">Perfil</a>
-                    </li>
-
-                    <li id="auth-buttons" style="display: list-item">
-                        <button class="btn-secondary">
-                            <a href="./login.html">Login</a>
-                        </button>
-                    </li>
-
-                    <li id="user-menu" style="display: none">
-                        <span id="user-display"></span>
-                        <button class="btn-secondary" onclick="logout()">Sair</button>
-                    </li>
+                    <li id="nav-missions" class="hidden"><a href="./missions.html">Missões</a></li>
+                    <li id="nav-profile" class="hidden"><a href="./perfil.html" class="active">Perfil</a></li>
+                    <li id="auth-buttons" class="visible"><button class="btn-secondary"><a
+                                href="./login.html">Login</a></button></li>
+                    <li id="user-menu" class="hidden"><span id="user-display"></span><button class="btn-secondary"
+                            onclick="logout()">Sair</button></li>
                 </ul>
             </nav>
             <div class="mobile-menu"><span>☰</span></div>
         </div>
     </header>
-
     <main>
-
-        <!-- Cabeçalho do perfil -->
         <section class="profile-header">
             <div class="container">
                 <div class="profile-hero">
-                    <div class="profile-avatar">
-                        <span id="profile-avatar-initials">?</span>
-                    </div>
+                    <div class="profile-avatar"><span id="profile-avatar-initials">?</span></div>
                     <div class="profile-info">
                         <div class="profile-badge">🌿 Membro ativo</div>
                         <h1 id="profile-name">Carregando...</h1>
@@ -67,133 +47,79 @@
                 </div>
             </div>
         </section>
-
-        <!-- Cards de estatísticas -->
         <section class="profile-stats-section">
             <div class="container">
                 <div class="profile-stats-grid">
-                    <div class="profile-stat-card">
-                        <span class="profile-stat-icon">💰</span>
-                        <span class="profile-stat-value" id="profile-balance">R$ 0,00</span>
-                        <span class="profile-stat-label">Saldo atual</span>
-                    </div>
-                    <div class="profile-stat-card">
-                        <span class="profile-stat-icon">✅</span>
-                        <span class="profile-stat-value" id="profile-missions">0</span>
-                        <span class="profile-stat-label">Missões concluídas</span>
-                    </div>
-                    <div class="profile-stat-card">
-                        <span class="profile-stat-icon">🎫</span>
-                        <span class="profile-stat-value" id="profile-redeemed">0</span>
-                        <span class="profile-stat-label">Passagens resgatadas</span>
-                    </div>
+                    <div class="profile-stat-card"><span>💰</span><strong id="profile-balance">R$
+                            0,00</strong><span>Saldo atual</span></div>
+                    <div class="profile-stat-card"><span>✅</span><strong id="profile-missions">0</strong><span>Missões
+                            concluídas</span></div>
+                    <div class="profile-stat-card"><span>🎫</span><strong
+                            id="profile-redeemed">0</strong><span>Passagens resgatadas</span></div>
                 </div>
             </div>
         </section>
-
-        <!-- Dados e histórico -->
         <section class="profile-content-section">
             <div class="container">
                 <div class="profile-content-grid">
-
-                    <!-- Dados pessoais -->
                     <div class="profile-card">
-                        <div class="profile-card-header">
-                            <span class="profile-card-icon">👤</span>
+                        <div class="profile-card-header"><span>👤</span>
                             <h2>Meus dados</h2>
                         </div>
                         <div class="profile-data-list">
-                            <div class="profile-data-item">
-                                <span class="profile-data-label">Nome</span>
-                                <span class="profile-data-value" id="profile-name-detail">—</span>
+                            <div class="profile-data-item"><span>Nome</span><span id="profile-name-detail">—</span>
                             </div>
-                            <div class="profile-data-item">
-                                <span class="profile-data-label">E-mail</span>
-                                <span class="profile-data-value" id="profile-email-detail">—</span>
+                            <div class="profile-data-item"><span>E-mail</span><span id="profile-email-detail">—</span>
                             </div>
-                            <div class="profile-data-item">
-                                <span class="profile-data-label">Membro desde</span>
-                                <span class="profile-data-value" id="profile-since">—</span>
+                            <div class="profile-data-item"><span>Membro desde</span><span id="profile-since">—</span>
                             </div>
                         </div>
-                        <button class="btn-primary profile-logout-btn" onclick="logout()">
-                            Sair da conta
-                        </button>
+                        <button class="btn-primary profile-logout-btn" onclick="logout()">Sair da conta</button>
                     </div>
-
-                    <!-- Histórico de missões recentes -->
                     <div class="profile-card">
-                        <div class="profile-card-header">
-                            <span class="profile-card-icon">📋</span>
+                        <div class="profile-card-header"><span>📋</span>
                             <h2>Missões recentes</h2>
                         </div>
                         <ul class="profile-history-list" id="profile-history">
-                            <li class="profile-history-item">
-                                <span class="profile-history-icon">♻️</span>
-                                <div class="profile-history-info">
-                                    <span class="profile-history-name">Separar resíduos recicláveis</span>
-                                    <span class="profile-history-date">Hoje</span>
-                                </div>
-                                <span class="profile-history-reward">+ R$ 0,50</span>
+                            <li class="profile-history-item"><span>♻️</span>
+                                <div><span>Separar resíduos recicláveis</span><span>Hoje</span></div><span
+                                    class="profile-history-reward">+ R$ 0,50</span>
                             </li>
-                            <li class="profile-history-item">
-                                <span class="profile-history-icon">🚶</span>
-                                <div class="profile-history-info">
-                                    <span class="profile-history-name">Caminhar ao invés de dirigir</span>
-                                    <span class="profile-history-date">Ontem</span>
-                                </div>
-                                <span class="profile-history-reward">+ R$ 1,00</span>
+                            <li class="profile-history-item"><span>🚶</span>
+                                <div><span>Caminhar ao invés de dirigir</span><span>Ontem</span></div><span
+                                    class="profile-history-reward">+ R$ 1,00</span>
                             </li>
-                            <li class="profile-history-item">
-                                <span class="profile-history-icon">💡</span>
-                                <div class="profile-history-info">
-                                    <span class="profile-history-name">Desligar luzes ao sair</span>
-                                    <span class="profile-history-date">2 dias atrás</span>
-                                </div>
-                                <span class="profile-history-reward">+ R$ 0,30</span>
+                            <li class="profile-history-item"><span>💡</span>
+                                <div><span>Desligar luzes ao sair</span><span>2 dias atrás</span></div><span
+                                    class="profile-history-reward">+ R$ 0,30</span>
                             </li>
-                            <li class="profile-history-item">
-                                <span class="profile-history-icon">🌿</span>
-                                <div class="profile-history-info">
-                                    <span class="profile-history-name">Usar ecobag nas compras</span>
-                                    <span class="profile-history-date">3 dias atrás</span>
-                                </div>
-                                <span class="profile-history-reward">+ R$ 0,70</span>
+                            <li class="profile-history-item"><span>🌿</span>
+                                <div><span>Usar ecobag nas compras</span><span>3 dias atrás</span></div><span
+                                    class="profile-history-reward">+ R$ 0,70</span>
                             </li>
                         </ul>
                         <a href="./missions.html" class="profile-see-more">Ver todas as missões →</a>
                     </div>
-
                 </div>
-
-                <!-- Barra de progresso para próximo resgate -->
                 <div class="profile-progress-card">
-                    <div class="profile-card-header">
-                        <span class="profile-card-icon">🎯</span>
+                    <div class="profile-card-header"><span>🎯</span>
                         <h2>Progresso para o próximo resgate</h2>
                     </div>
-                    <div class="profile-progress-info">
-                        <span id="profile-progress-current">R$ 2,50</span>
-                        <span>de</span>
-                        <span>R$ 4,40</span>
-                    </div>
+                    <div class="profile-progress-info"><span id="profile-progress-current">R$
+                            2,50</span><span>de</span><span>R$ 4,40</span></div>
                     <div class="profile-progress-bar">
                         <div class="profile-progress-fill" id="profile-progress-fill" style="width: 56%"></div>
                     </div>
                     <p class="profile-progress-hint">Faltam <strong>R$ 1,90</strong> para sua próxima passagem! 🚌</p>
                 </div>
-
             </div>
         </section>
-
     </main>
-
     <footer>
         <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <span>🌿</span> SoulUp Rocket
-                    <p>Transformando pequenas ações em grandes mudanças.</p>
+                <div class="footer-logo"><span>🌿</span> SoulUp Rocket<p>Transformando pequenas ações em grandes
+                        mudanças.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Links Rápidos</h4>
@@ -215,7 +141,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

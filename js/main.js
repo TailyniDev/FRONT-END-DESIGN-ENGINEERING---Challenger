@@ -1,3 +1,6 @@
+//Missões e saldo por usuário
+
+
 const missionsData = [
     {
         id: 1,
@@ -33,10 +36,10 @@ const missionsData = [
     }
 ];
 
-let missions = [];
-let userBalance = 0;
+let missions    = [];
+let userBalance = 0; // começa em zero — sem valor pré-definido
 
-// ── Chaves do localStorage  ──
+//Chaves do localStorage vinculadas ao usuário
 function getChaveBalance() {
     const usuario = getUsuarioLogado();
     return usuario ? `ecoBalance_${usuario.user}` : "ecoBalance_guest";
@@ -52,22 +55,22 @@ function getChavePassagens() {
     return usuario ? `ecoPassagens_${usuario.user}` : "ecoPassagens_guest";
 }
 
-// ── Carregar dados do usuário atual ──
+//Carregar dados do usuário atual
 function loadData() {
     const savedMissions = localStorage.getItem(getChaveMissions());
-    const savedBalance = localStorage.getItem(getChaveBalance());
+    const savedBalance  = localStorage.getItem(getChaveBalance());
 
-    missions = savedMissions ? JSON.parse(savedMissions) : JSON.parse(JSON.stringify(missionsData));
-    userBalance = savedBalance ? parseFloat(savedBalance) : 0;
+    missions    = savedMissions ? JSON.parse(savedMissions) : JSON.parse(JSON.stringify(missionsData));
+    userBalance = savedBalance  ? parseFloat(savedBalance)  : 0;
 }
 
-// ── Salvar dados do usuário atual ──
+//Salvar dados do usuário atual
 function saveData() {
     localStorage.setItem(getChaveMissions(), JSON.stringify(missions));
-    localStorage.setItem(getChaveBalance(), userBalance.toFixed(2));
+    localStorage.setItem(getChaveBalance(),  userBalance.toFixed(2));
 }
 
-// ── Atualizar saldo na tela ──
+//Atualizar saldo na tela
 function updateBalance() {
     const balanceElement = document.getElementById("userBalance");
     if (balanceElement) {
@@ -75,7 +78,7 @@ function updateBalance() {
     }
 }
 
-// ── Renderizar cards de missão ──
+//Renderizar cards de missão
 function renderMissions() {
     const missionsGrid = document.getElementById("missionsGrid");
     if (!missionsGrid) return;
@@ -108,7 +111,7 @@ function renderMissions() {
     });
 }
 
-// ── Completar missão ──
+//Completar missão
 function completeMission(id) {
     const mission = missions.find((m) => m.id === id);
     if (!mission || mission.isCompleted) return;
@@ -123,9 +126,9 @@ function completeMission(id) {
     alert(`Missão concluída! Você ganhou R$ ${mission.reward.toFixed(2).replace(".", ",")}`);
 }
 
-// ── Resgate de passagem ──
+// Resgate de passagem 
 function setupRedeem() {
-    const redeemBtn = document.getElementById("redeemBtn");
+    const redeemBtn     = document.getElementById("redeemBtn");
     const redeemMessage = document.getElementById("redeemMessage");
 
     if (!redeemBtn || !redeemMessage) return;
@@ -137,8 +140,8 @@ function setupRedeem() {
             userBalance -= ticketPrice;
 
             // Incrementa contador de passagens resgatadas
-            const chavePassagens = getChavePassagens();
-            const totalPassagens = parseInt(localStorage.getItem(chavePassagens) || "0") + 1;
+            const chavePassagens  = getChavePassagens();
+            const totalPassagens  = parseInt(localStorage.getItem(chavePassagens) || "0") + 1;
             localStorage.setItem(chavePassagens, totalPassagens);
 
             saveData();
@@ -158,6 +161,7 @@ function setupRedeem() {
     });
 }
 
+// Inicialização 
 document.addEventListener("DOMContentLoaded", () => {
     loadData();
     renderMissions();
@@ -166,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ── CPF ──
+// Máscara de CPF
 const cpfInput = document.getElementById("cpf");
 if (cpfInput) {
     cpfInput.addEventListener("input", function (e) {
@@ -179,7 +183,7 @@ if (cpfInput) {
     });
 }
 
-// ── Telefone ──
+// Máscara de telefone 
 const phoneMask = (value) => {
     if (!value) return "";
     value = value.replace(/\D/g, "");

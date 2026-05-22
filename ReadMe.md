@@ -84,12 +84,6 @@ FRONT-END-DESIGN-ENGINEERING---Challenger/
 
 ---
 
-## 🖼️ Visão Geral do Projeto
-
-![Logo SoulUp Rocket](assets/img/Logo.png)
-
----
-
 ## 👩‍💻 Equipe
 
 | Nome | RM | Turma | LinkedIn | GitHub |
@@ -102,7 +96,7 @@ FRONT-END-DESIGN-ENGINEERING---Challenger/
 ## 🔗 Repositório
 
 📂 [https://github.com/TailyniDev/FRONT-END-DESIGN-ENGINEERING---Challenger](https://github.com/TailyniDev/FRONT-END-DESIGN-ENGINEERING---Challenger)
-
+🔗 [https://tailynidev.github.io/FRONT-END-DESIGN-ENGINEERING---Challenger/](https://tailynidev.github.io/FRONT-END-DESIGN-ENGINEERING---Challenger/)
 ---
 
 ## Contato
